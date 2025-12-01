@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors - Professional trust and business credibility */
+    --color-primary: #1e3a8a; /* blue-900 */
+    --color-primary-50: #eff6ff; /* blue-50 */
+    --color-primary-100: #dbeafe; /* blue-100 */
+    --color-primary-200: #bfdbfe; /* blue-200 */
+    --color-primary-300: #93c5fd; /* blue-300 */
+    --color-primary-400: #60a5fa; /* blue-400 */
+    --color-primary-500: #3b82f6; /* blue-500 */
+    --color-primary-600: #2563eb; /* blue-600 */
+    --color-primary-700: #1d4ed8; /* blue-700 */
+    --color-primary-800: #1e40af; /* blue-800 */
+    --color-primary-900: #1e3a8a; /* blue-900 */
+
+    /* Secondary Colors - Clean workspace canvas */
+    --color-secondary: #f8fafc; /* slate-50 */
+    --color-secondary-100: #f1f5f9; /* slate-100 */
+    --color-secondary-200: #e2e8f0; /* slate-200 */
+    --color-secondary-300: #cbd5e1; /* slate-300 */
+
+    /* Accent Colors - Premium positioning */
+    --color-accent: #f59e0b; /* amber-500 */
+    --color-accent-50: #fffbeb; /* amber-50 */
+    --color-accent-100: #fef3c7; /* amber-100 */
+    --color-accent-200: #fde68a; /* amber-200 */
+    --color-accent-300: #fcd34d; /* amber-300 */
+    --color-accent-400: #fbbf24; /* amber-400 */
+    --color-accent-500: #f59e0b; /* amber-500 */
+    --color-accent-600: #d97706; /* amber-600 */
+    --color-accent-700: #b45309; /* amber-700 */
+    --color-accent-800: #92400e; /* amber-800 */
+
+    /* Background Colors */
+    --color-background: #ffffff; /* white */
+    --color-surface: #f1f5f9; /* slate-100 */
+
+    /* Text Colors */
+    --color-text-primary: #0f172a; /* slate-900 */
+    --color-text-secondary: #64748b; /* slate-500 */
+    --color-text-tertiary: #94a3b8; /* slate-400 */
+
+    /* Status Colors */
+    --color-success: #059669; /* emerald-600 */
+    --color-success-50: #ecfdf5; /* emerald-50 */
+    --color-success-100: #d1fae5; /* emerald-100 */
+    --color-success-500: #10b981; /* emerald-500 */
+    --color-success-600: #059669; /* emerald-600 */
+    --color-success-700: #047857; /* emerald-700 */
+
+    --color-warning: #d97706; /* amber-600 */
+    --color-warning-50: #fffbeb; /* amber-50 */
+    --color-warning-100: #fef3c7; /* amber-100 */
+    --color-warning-500: #f59e0b; /* amber-500 */
+    --color-warning-600: #d97706; /* amber-600 */
+
+    --color-error: #dc2626; /* red-600 */
+    --color-error-50: #fef2f2; /* red-50 */
+    --color-error-100: #fee2e2; /* red-100 */
+    --color-error-500: #ef4444; /* red-500 */
+    --color-error-600: #dc2626; /* red-600 */
+    --color-error-700: #b91c1c; /* red-700 */
+
+    /* Border Colors */
+    --color-border: #e2e8f0; /* slate-200 */
+    --color-border-light: #f1f5f9; /* slate-100 */
+
+    /* Shadow Values */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.12);
+
+    /* Transition Timings */
+    --transition-fast: 200ms;
+    --transition-base: 300ms;
+    --transition-slow: 400ms;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+  }
+
+  .font-accent {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  /* Button Styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-800 shadow-sm hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-primary border border-border hover:bg-secondary-100;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-accent-600 shadow-sm hover:shadow-md;
+  }
+
+  /* Card Styles */
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-border transition-shadow duration-300 ease-in-out;
+  }
+
+  .card-hover {
+    @apply hover:shadow-lg;
+  }
+
+  /* Input Styles */
+  .input {
+    @apply w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 ease-in-out;
+  }
+
+  .input-error {
+    @apply border-error focus:ring-error;
+  }
+
+  /* Section Styles */
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-alt {
+    @apply bg-surface;
+  }
+
+  /* Container Styles */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Text Styles */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn var(--transition-slow) ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp var(--transition-slow) ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer utilities {
+  /* Custom Shadows */
+  .shadow-subtle {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Transition Utilities */
+  .transition-fast {
+    transition-duration: var(--transition-fast);
+  }
+
+  .transition-base {
+    transition-duration: var(--transition-base);
+  }
+
+  .transition-slow {
+    transition-duration: var(--transition-slow);
+  }
+
+  /* Focus Styles */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  /* Hover Lift Effect */
+  .hover-lift {
+    @apply transition-transform duration-300 ease-in-out hover:-translate-y-1;
+  }
+}

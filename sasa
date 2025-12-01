@@ -1,0 +1,30 @@
+                <!-- Business Community -->
+<div class="card card-hover p-8 text-center group">
+    <div class="w-16 h-16 bg-success/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-success/20 transition-colors">
+        <img src="/assets/icons/community.svg" alt="Community icon" class="w-8 h-8">
+    </div>
+
+    <h3 class="text-2xl font-bold text-primary mb-4">Enterprise Community</h3>
+
+    <p class="text-text-secondary mb-6 leading-relaxed">
+        Join a vibrant network of entrepreneurs, freelancers, and established companies.  
+        Build meaningful connections and unlock new opportunities within a supportive professional ecosystem.
+    </p>
+
+    <ul class="text-left space-y-3">
+        <li class="flex items-start space-x-3">
+            <img src="/assets/icons/check.svg" class="w-5 h-5 mt-0.5 flex-shrink-0" alt="">
+            <span class="text-text-secondary">Regular networking events & community meet-ups</span>
+        </li>
+
+        <li class="flex items-start space-x-3">
+            <img src="/assets/icons/check.svg" class="w-5 h-5 mt-0.5 flex-shrink-0" alt="">
+            <span class="text-text-secondary">Access to shared business tools and resources</span>
+        </li>
+
+        <li class="flex items-start space-x-3">
+            <img src="/assets/icons/check.svg" class="w-5 h-5 mt-0.5 flex-shrink-0" alt="">
+            <span class="text-text-secondary">On-site support from industry professionals</span>
+        </li>
+    </ul>
+</div>
