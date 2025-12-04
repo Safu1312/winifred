@@ -722,10 +722,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 <img id="main-image" 
                      src="assets/images/A1.jpeg" 
                      alt="Modern office space with desks" 
-                     class="w-full h-80 md:h-96 object-cover gallery-image cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
-                     onclick="openSidePanel(0)"
-                     onmouseenter="showHoverPreview(event, 0)"
-                     onmouseleave="hideHoverPreview()">
+                     class="w-full h-80 md:h-96 object-cover cursor-pointer transition-opacity duration-300"
+                     onclick="openSidePanel(currentImageIndex)">
+                <!-- Image Caption Overlay -->
+                <div class="relative">
+                    <div id="main-image-caption" class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent text-white px-4 py-3 transform translate-y-full transition-transform duration-300">
+                        <p id="caption-text" class="font-medium">Modern office space with desks</p>
+                        <p class="text-sm text-white/80">Click to view larger</p>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -734,34 +739,38 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="bg-white rounded-xl shadow-md overflow-hidden thumbnail-container">
                 <img src="assets/images/A2.jpeg" 
                      alt="Office meeting area" 
-                     class="w-full h-40 object-cover gallery-image cursor-pointer transition-all duration-300 hover:scale-105 hover:brightness-110"
-                     onclick="openSidePanel(1)"
-                     onmouseenter="showHoverPreview(event, 1)"
-                     onmouseleave="hideHoverPreview()">
+                     data-index="1"
+                     class="thumbnail-image w-full h-40 object-cover cursor-pointer transition-all duration-300 hover:scale-105"
+                     onmouseenter="previewImage(1)"
+                     onmouseleave="resetImage()"
+                     onclick="selectImage(1)">
             </div>
             <div class="bg-white rounded-xl shadow-md overflow-hidden thumbnail-container">
                 <img src="assets/images/A3.jpg" 
                      alt="Office kitchen area" 
-                     class="w-full h-40 object-cover gallery-image cursor-pointer transition-all duration-300 hover:scale-105 hover:brightness-110"
-                     onclick="openSidePanel(2)"
-                     onmouseenter="showHoverPreview(event, 2)"
-                     onmouseleave="hideHoverPreview()">
+                     data-index="2"
+                     class="thumbnail-image w-full h-40 object-cover cursor-pointer transition-all duration-300 hover:scale-105"
+                     onmouseenter="previewImage(2)"
+                     onmouseleave="resetImage()"
+                     onclick="selectImage(2)">
             </div>
             <div class="bg-white rounded-xl shadow-md overflow-hidden thumbnail-container">
                 <img src="assets/images/A4.jpg" 
                      alt="Office reception area" 
-                     class="w-full h-40 object-cover gallery-image cursor-pointer transition-all duration-300 hover:scale-105 hover:brightness-110"
-                     onclick="openSidePanel(3)"
-                     onmouseenter="showHoverPreview(event, 3)"
-                     onmouseleave="hideHoverPreview()">
+                     data-index="3"
+                     class="thumbnail-image w-full h-40 object-cover cursor-pointer transition-all duration-300 hover:scale-105"
+                     onmouseenter="previewImage(3)"
+                     onmouseleave="resetImage()"
+                     onclick="selectImage(3)">
             </div>
             <div class="bg-white rounded-xl shadow-md overflow-hidden thumbnail-container">
                 <img src="assets/images/A5.jpg" 
                      alt="Office building exterior" 
-                     class="w-full h-40 object-cover gallery-image cursor-pointer transition-all duration-300 hover:scale-105 hover:brightness-110"
-                     onclick="openSidePanel(4)"
-                     onmouseenter="showHoverPreview(event, 4)"
-                     onmouseleave="hideHoverPreview()">
+                     data-index="4"
+                     class="thumbnail-image w-full h-40 object-cover cursor-pointer transition-all duration-300 hover:scale-105"
+                     onmouseenter="previewImage(4)"
+                     onmouseleave="resetImage()"
+                     onclick="selectImage(4)">
             </div>
         </div>
     </div>
@@ -769,7 +778,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Image Counter & Navigation -->
     <div class="flex justify-between items-center mt-6 px-4">
         <div class="text-gray-600">
-            <span class="font-medium">5 photos</span> • Hover to preview, click to view in panel
+            <span class="font-medium">5 photos</span> • Hover to preview, click to select
         </div>
         <div class="flex space-x-2">
             <button onclick="changeMainImage('prev')" class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-gray-50 transition-colors">
@@ -781,16 +790,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </section>
-
-<!-- Hover Preview Popup -->
-<div id="hover-preview" class="fixed z-50 pointer-events-none opacity-0 transition-all duration-200 ease-out transform scale-95">
-    <div class="bg-white rounded-xl shadow-2xl overflow-hidden border-2 border-white">
-        <img id="hover-preview-image" src="" alt="" class="w-72 h-48 object-cover">
-        <div id="hover-preview-caption" class="bg-gradient-to-t from-black/70 to-transparent text-white text-sm px-3 py-2 absolute bottom-0 left-0 right-0"></div>
-    </div>
-    <!-- Arrow pointer -->
-    <div id="hover-arrow" class="absolute w-4 h-4 bg-white transform rotate-45 shadow-lg"></div>
-</div>
 
 <!-- Side Panel -->
 <div id="side-panel" class="fixed top-0 right-0 h-full w-full md:w-1/2 lg:w-2/5 bg-white shadow-2xl z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
@@ -821,7 +820,6 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Panel Thumbnail Strip -->
     <div class="absolute bottom-0 left-0 right-0 bg-white border-t p-3">
         <div id="panel-thumbnails" class="flex justify-center space-x-2 overflow-x-auto">
-            <!-- Thumbnails will be generated by JavaScript -->
         </div>
     </div>
 </div>
@@ -836,14 +834,33 @@ document.addEventListener('DOMContentLoaded', function() {
         overflow: hidden;
     }
     
-    /* Hover preview styles */
-    #hover-preview {
-        max-width: 320px;
+    /* Active thumbnail indicator */
+    .thumbnail-image {
+        border: 3px solid transparent;
+        transition: all 0.3s ease;
     }
     
-    #hover-preview.visible {
-        opacity: 1;
-        transform: scale(1);
+    .thumbnail-image:hover {
+        opacity: 0.9;
+    }
+    
+    .thumbnail-image.active {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+    }
+    
+    /* Main image hover effect */
+    #main-image {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    #main-image:hover {
+        transform: scale(1.02);
+    }
+    
+    /* Caption show on hover */
+    .md\:w-2\/3:hover #main-image-caption {
+        transform: translateY(-100%);
     }
     
     /* Panel thumbnail active state */
@@ -874,20 +891,14 @@ document.addEventListener('DOMContentLoaded', function() {
         pointer-events: auto;
     }
     
-    /* Image loading animation */
-    @keyframes imageLoad {
-        from {
-            opacity: 0;
-            transform: scale(0.98);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
+    /* Smooth image transition */
+    .image-fade {
+        animation: fadeIn 0.3s ease;
     }
     
-    .image-loaded {
-        animation: imageLoad 0.3s ease-out;
+    @keyframes fadeIn {
+        from { opacity: 0.5; }
+        to { opacity: 1; }
     }
     
     /* Mobile adjustments */
@@ -895,246 +906,173 @@ document.addEventListener('DOMContentLoaded', function() {
         #side-panel {
             width: 100%;
         }
-        
-        #hover-preview {
-            display: none !important;
-        }
     }
 </style>
 
 <script>
-    // Define image array for gallery
-    const galleryImages = [
-        {
-            src: "assets/images/A1.jpeg",
-            alt: "Modern office space with desks"
-        },
-        {
-            src: "assets/images/A2.jpeg",
-            alt: "Office meeting area"
-        },
-        {
-            src: "assets/images/A3.jpg",
-            alt: "Office kitchen area"
-        },
-        {
-            src: "assets/images/A4.jpg",
-            alt: "Office reception area"
-        },
-        {
-            src: "assets/images/A5.jpg",
-            alt: "Office building exterior"
-        }
-    ];
-    
-    let currentImageIndex = 0;
-    let hoverTimeout = null;
-    
-    // ==================== HOVER PREVIEW FUNCTIONS ====================
-    
-    function showHoverPreview(event, index) {
-        // Clear any existing timeout
-        if (hoverTimeout) clearTimeout(hoverTimeout);
-        
-        const preview = document.getElementById('hover-preview');
-        const previewImage = document.getElementById('hover-preview-image');
-        const previewCaption = document.getElementById('hover-preview-caption');
-        const arrow = document.getElementById('hover-arrow');
-        
-        // Set image and caption
-        previewImage.src = galleryImages[index].src;
-        previewImage.alt = galleryImages[index].alt;
-        previewCaption.textContent = galleryImages[index].alt;
-        
-        // Position the preview
-        const rect = event.target.getBoundingClientRect();
-        const previewWidth = 288; // w-72 = 18rem = 288px
-        const previewHeight = 200;
-        
-        let left, top;
-        
-        // Calculate horizontal position
-        if (rect.left > window.innerWidth / 2) {
-            // Show on left side of thumbnail
-            left = rect.left - previewWidth - 16;
-            arrow.style.right = '-8px';
-            arrow.style.left = 'auto';
-        } else {
-            // Show on right side of thumbnail
-            left = rect.right + 16;
-            arrow.style.left = '-8px';
-            arrow.style.right = 'auto';
-        }
-        
-        // Calculate vertical position (center with thumbnail)
-        top = rect.top + (rect.height / 2) - (previewHeight / 2);
-        
-        // Keep within viewport
-        top = Math.max(16, Math.min(top, window.innerHeight - previewHeight - 16));
-        left = Math.max(16, Math.min(left, window.innerWidth - previewWidth - 16));
-        
-        // Position arrow vertically
-        const arrowTop = rect.top + (rect.height / 2) - top - 8;
-        arrow.style.top = `${Math.max(20, Math.min(arrowTop, previewHeight - 20))}px`;
-        
-        preview.style.left = `${left}px`;
-        preview.style.top = `${top}px`;
-        
-        // Show with slight delay for smoother experience
-        hoverTimeout = setTimeout(() => {
-            preview.classList.add('visible');
-        }, 150);
-    }
-    
-    function hideHoverPreview() {
-        if (hoverTimeout) clearTimeout(hoverTimeout);
-        
-        const preview = document.getElementById('hover-preview');
-        preview.classList.remove('visible');
-    }
-    
-    // ==================== SIDE PANEL FUNCTIONS ====================
-    
-    function openSidePanel(index) {
+    // ==================== GALLERY DATA ====================
+const galleryImages = [
+    { src: "assets/images/A1.jpeg", alt: "Modern office space with desks" },
+    { src: "assets/images/A2.jpeg", alt: "Office meeting area" },
+    { src: "assets/images/A3.jpg", alt: "Office kitchen area" },
+    { src: "assets/images/A4.jpg", alt: "Office reception area" },
+    { src: "assets/images/A5.jpg", alt: "Office building exterior" },
+];
+
+let currentImageIndex = 0; // Currently selected image
+let isHovering = false;    // Track hover state
+
+// ==================== DOM REFERENCES ====================
+const mainImage = document.getElementById('main-image');
+const captionText = document.getElementById('caption-text');
+const thumbnails = document.querySelectorAll('.thumbnail-image');
+const sidePanel = document.getElementById('side-panel');
+const panelOverlay = document.getElementById('panel-overlay');
+const panelImage = document.getElementById('panel-image');
+const panelTitle = document.getElementById('panel-title');
+const panelCounter = document.getElementById('panel-counter');
+const panelThumbnailsContainer = document.getElementById('panel-thumbnails');
+
+// ==================== MAIN IMAGE & THUMBNAIL FUNCTIONS ====================
+
+// Update main image and active thumbnail
+function updateMainImage(index) {
+    currentImageIndex = index;
+    mainImage.src = galleryImages[index].src;
+    mainImage.alt = galleryImages[index].alt;
+    captionText.textContent = galleryImages[index].alt;
+
+    // Update thumbnail active state
+    thumbnails.forEach((thumb, idx) => {
+        thumb.classList.toggle('active', idx === index - 1);
+    });
+
+    // Update onclick for side panel
+    mainImage.onclick = () => openSidePanel(index);
+}
+
+// Hover preview (temporary)
+function previewImage(index) {
+    isHovering = true;
+    mainImage.classList.add('image-fade');
+    mainImage.src = galleryImages[index].src;
+    mainImage.alt = galleryImages[index].alt;
+    captionText.textContent = galleryImages[index].alt;
+
+    // Update side panel if open
+    if (sidePanel.classList.contains('open')) {
         currentImageIndex = index;
-        
-        const panel = document.getElementById('side-panel');
-        const overlay = document.getElementById('panel-overlay');
-        const panelImage = document.getElementById('panel-image');
-        const panelTitle = document.getElementById('panel-title');
-        const panelCounter = document.getElementById('panel-counter');
-        
-        // Hide hover preview
-        hideHoverPreview();
-        
-        // Set panel content
-        panelImage.src = galleryImages[index].src;
-        panelImage.alt = galleryImages[index].alt;
-        panelTitle.textContent = galleryImages[index].alt;
-        panelCounter.textContent = `${index + 1} / ${galleryImages.length}`;
-        
-        // Generate thumbnails
-        generatePanelThumbnails();
-        
-        // Show panel and overlay
-        panel.classList.add('open');
-        overlay.classList.add('visible');
-        
-        // Prevent body scrolling
-        document.body.style.overflow = 'hidden';
-        
-        // Add loaded animation
-        panelImage.classList.add('image-loaded');
-        setTimeout(() => panelImage.classList.remove('image-loaded'), 300);
-    }
-    
-    function closeSidePanel() {
-        const panel = document.getElementById('side-panel');
-        const overlay = document.getElementById('panel-overlay');
-        
-        panel.classList.remove('open');
-        overlay.classList.remove('visible');
-        
-        // Restore body scrolling
-        document.body.style.overflow = 'auto';
-    }
-    
-    function navigatePanel(direction) {
-        if (direction === 'prev') {
-            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-        } else {
-            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-        }
-        
         updatePanelImage();
     }
-    
-    function updatePanelImage() {
-        const panelImage = document.getElementById('panel-image');
-        const panelTitle = document.getElementById('panel-title');
-        const panelCounter = document.getElementById('panel-counter');
-        
-        // Fade out
-        panelImage.style.opacity = '0';
-        
-        setTimeout(() => {
-            panelImage.src = galleryImages[currentImageIndex].src;
-            panelImage.alt = galleryImages[currentImageIndex].alt;
-            panelTitle.textContent = galleryImages[currentImageIndex].alt;
-            panelCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
-            
-            // Fade in
-            panelImage.style.opacity = '1';
-            
-            // Update thumbnail active state
-            updateThumbnailActiveState();
-        }, 150);
+
+    setTimeout(() => mainImage.classList.remove('image-fade'), 300);
+}
+
+// Reset main image when hover ends
+function resetImage() {
+    isHovering = false;
+    setTimeout(() => {
+        if (!isHovering) updateMainImage(currentImageIndex);
+    }, 100);
+}
+
+// Select image permanently (click)
+function selectImage(index) {
+    updateMainImage(index);
+    openSidePanel(index); // Open side panel on click
+}
+
+// Change main image via arrows
+function changeMainImage(direction) {
+    if (direction === 'prev') {
+        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+    } else {
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
     }
-    
-    function generatePanelThumbnails() {
-        const container = document.getElementById('panel-thumbnails');
-        container.innerHTML = '';
-        
-        galleryImages.forEach((img, index) => {
-            const thumb = document.createElement('img');
-            thumb.src = img.src;
-            thumb.alt = img.alt;
-            thumb.className = `panel-thumb w-16 h-12 object-cover rounded-md cursor-pointer ${index === currentImageIndex ? 'active' : ''}`;
-            thumb.onclick = () => {
-                currentImageIndex = index;
-                updatePanelImage();
-            };
-            container.appendChild(thumb);
-        });
+    updateMainImage(currentImageIndex);
+}
+
+// ==================== SIDE PANEL FUNCTIONS ====================
+
+// Open side panel
+function openSidePanel(index) {
+    currentImageIndex = index;
+    panelImage.src = galleryImages[index].src;
+    panelImage.alt = galleryImages[index].alt;
+    panelTitle.textContent = galleryImages[index].alt;
+    panelCounter.textContent = `${index + 1} / ${galleryImages.length}`;
+    generatePanelThumbnails();
+
+    sidePanel.classList.add('open');
+    panelOverlay.classList.add('visible');
+    document.body.style.overflow = 'hidden';
+}
+
+// Close side panel
+function closeSidePanel() {
+    sidePanel.classList.remove('open');
+    panelOverlay.classList.remove('visible');
+    document.body.style.overflow = 'auto';
+}
+
+// Navigate side panel images
+function navigatePanel(direction) {
+    if (direction === 'prev') {
+        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+    } else {
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
     }
-    
-    function updateThumbnailActiveState() {
-        const thumbs = document.querySelectorAll('.panel-thumb');
-        thumbs.forEach((thumb, index) => {
-            if (index === currentImageIndex) {
-                thumb.classList.add('active');
-            } else {
-                thumb.classList.remove('active');
-            }
-        });
-    }
-    
-    // ==================== MAIN IMAGE NAVIGATION ====================
-    
-    function changeMainImage(direction) {
-        const mainImage = document.getElementById('main-image');
-        
-        if (direction === 'prev') {
-            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-        } else {
-            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-        }
-        
-        mainImage.style.opacity = '0.5';
-        setTimeout(() => {
-            mainImage.src = galleryImages[currentImageIndex].src;
-            mainImage.alt = galleryImages[currentImageIndex].alt;
-            mainImage.style.opacity = '1';
-        }, 150);
-    }
-    
-    // ==================== KEYBOARD NAVIGATION ====================
-    
-    document.addEventListener('keydown', (e) => {
-        const panel = document.getElementById('side-panel');
-        
-        if (panel.classList.contains('open')) {
-            if (e.key === 'Escape') {
-                closeSidePanel();
-            }
-            if (e.key === 'ArrowLeft') {
-                navigatePanel('prev');
-            }
-            if (e.key === 'ArrowRight') {
-                navigatePanel('next');
-            }
-        }
+    updatePanelImage();
+    updateMainImage(currentImageIndex);
+}
+
+// Update side panel image
+function updatePanelImage() {
+    panelImage.style.opacity = 0;
+    setTimeout(() => {
+        panelImage.src = galleryImages[currentImageIndex].src;
+        panelImage.alt = galleryImages[currentImageIndex].alt;
+        panelTitle.textContent = galleryImages[currentImageIndex].alt;
+        panelCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+        panelImage.style.opacity = 1;
+        updatePanelThumbnailState();
+    }, 150);
+}
+
+// Generate panel thumbnails
+function generatePanelThumbnails() {
+    panelThumbnailsContainer.innerHTML = '';
+    galleryImages.forEach((img, index) => {
+        const thumb = document.createElement('img');
+        thumb.src = img.src;
+        thumb.alt = img.alt;
+        thumb.className = `panel-thumb w-16 h-12 object-cover rounded-md cursor-pointer ${index === currentImageIndex ? 'active' : ''}`;
+        thumb.onclick = () => {
+            currentImageIndex = index;
+            updatePanelImage();
+            updateMainImage(index);
+        };
+        panelThumbnailsContainer.appendChild(thumb);
     });
+}
+
+// Update side panel thumbnail active state
+function updatePanelThumbnailState() {
+    const thumbs = document.querySelectorAll('.panel-thumb');
+    thumbs.forEach((thumb, index) => {
+        thumb.classList.toggle('active', index === currentImageIndex);
+    });
+}
+
+// ==================== KEYBOARD NAVIGATION ====================
+document.addEventListener('keydown', (e) => {
+    if (sidePanel.classList.contains('open')) {
+        if (e.key === 'Escape') closeSidePanel();
+        if (e.key === 'ArrowLeft') navigatePanel('prev');
+        if (e.key === 'ArrowRight') navigatePanel('next');
+    }
+});
+
 </script>
 
         <!-- Office Details Section -->
