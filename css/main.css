@@ -559,74 +559,101 @@ video {
 }
 
 :root {
-  /* Primary Colors - Professional trust and business credibility */
-  --color-primary: #1e3a8a;
-  /* blue-900 */
-  --color-primary-50: #eff6ff;
-  /* blue-50 */
-  --color-primary-100: #dbeafe;
-  /* blue-100 */
-  --color-primary-200: #bfdbfe;
-  /* blue-200 */
-  --color-primary-300: #93c5fd;
-  /* blue-300 */
-  --color-primary-400: #60a5fa;
-  /* blue-400 */
-  --color-primary-500: #3b82f6;
-  /* blue-500 */
-  --color-primary-600: #2563eb;
-  /* blue-600 */
-  --color-primary-700: #1d4ed8;
-  /* blue-700 */
-  --color-primary-800: #1e40af;
-  /* blue-800 */
-  --color-primary-900: #1e3a8a;
-  /* blue-900 */
-  /* Secondary Colors - Clean workspace canvas */
-  --color-secondary: #f8fafc;
-  /* slate-50 */
-  --color-secondary-100: #f1f5f9;
-  /* slate-100 */
-  --color-secondary-200: #e2e8f0;
-  /* slate-200 */
-  --color-secondary-300: #cbd5e1;
-  /* slate-300 */
-  /* Accent Colors - Premium positioning */
-  --color-accent: #f59e0b;
-  /* amber-500 */
-  --color-accent-50: #fffbeb;
-  /* amber-50 */
-  --color-accent-100: #fef3c7;
-  /* amber-100 */
-  --color-accent-200: #fde68a;
-  /* amber-200 */
-  --color-accent-300: #fcd34d;
-  /* amber-300 */
-  --color-accent-400: #fbbf24;
-  /* amber-400 */
-  --color-accent-500: #f59e0b;
-  /* amber-500 */
-  --color-accent-600: #d97706;
-  /* amber-600 */
-  --color-accent-700: #b45309;
-  /* amber-700 */
-  --color-accent-800: #92400e;
-  /* amber-800 */
-  /* Background Colors */
+  /* Primary Colors - Fresh Sky Blue */
+  --color-primary: #0ea5e9;
+  /* sky-500 */
+  --color-primary-50: #f0f9ff;
+  /* sky-50 */
+  --color-primary-100: #e0f2fe;
+  /* sky-100 */
+  --color-primary-200: #bae6fd;
+  /* sky-200 */
+  --color-primary-300: #7dd3fc;
+  /* sky-300 */
+  --color-primary-400: #38bdf8;
+  /* sky-400 */
+  --color-primary-500: #0ea5e9;
+  /* sky-500 */
+  --color-primary-600: #0284c7;
+  /* sky-600 */
+  --color-primary-700: #0369a1;
+  /* sky-700 */
+  --color-primary-800: #075985;
+  /* sky-800 */
+  --color-primary-900: #0c4a6e;
+  /* sky-900 */
+
+  /* Secondary Colors - Warm Light Canvas */
+  --color-secondary: #fefce8;
+  /* yellow-50 */
+  --color-secondary-100: #fef9c3;
+  /* yellow-100 */
+  --color-secondary-200: #fef08a;
+  /* yellow-200 */
+  --color-secondary-300: #fde047;
+  /* yellow-300 */
+
+  /* Accent Colors - Vibrant Coral/Rose */
+  --color-accent: #f43f5e;
+  /* rose-500 */
+  --color-accent-50: #fff1f2;
+  /* rose-50 */
+  --color-accent-100: #ffe4e6;
+  /* rose-100 */
+  --color-accent-200: #fecdd3;
+  /* rose-200 */
+  --color-accent-300: #fda4af;
+  /* rose-300 */
+  --color-accent-400: #fb7185;
+  /* rose-400 */
+  --color-accent-500: #f43f5e;
+  /* rose-500 */
+  --color-accent-600: #e11d48;
+  /* rose-600 */
+  --color-accent-700: #be123c;
+  /* rose-700 */
+  --color-accent-800: #9f1239;
+  /* rose-800 */
+
+  /* Tertiary Colors - Fresh Mint/Teal */
+  --color-tertiary: #14b8a6;
+  /* teal-500 */
+  --color-tertiary-50: #f0fdfa;
+  /* teal-50 */
+  --color-tertiary-100: #ccfbf1;
+  /* teal-100 */
+  --color-tertiary-200: #99f6e4;
+  /* teal-200 */
+  --color-tertiary-300: #5eead4;
+  /* teal-300 */
+  --color-tertiary-400: #2dd4bf;
+  /* teal-400 */
+  --color-tertiary-500: #14b8a6;
+  /* teal-500 */
+
+  /* Background Colors - Warm & Inviting */
   --color-background: #ffffff;
   /* white */
-  --color-surface: #f1f5f9;
-  /* slate-100 */
-  /* Text Colors */
-  --color-text-primary: #0f172a;
-  /* slate-900 */
-  --color-text-secondary: #64748b;
-  /* slate-500 */
+  --color-background-warm: #fffbf5;
+  /* warm white */
+  --color-surface: #f8fafc;
+  /* slate-50 */
+  --color-surface-warm: #fefdfb;
+  /* warm surface */
+
+  /* Text Colors - Softer Contrast */
+  --color-text-primary: #1e293b;
+  /* slate-800 */
+  --color-text-secondary: #475569;
+  /* slate-600 */
   --color-text-tertiary: #94a3b8;
   /* slate-400 */
-  /* Status Colors */
-  --color-success: #059669;
-  /* emerald-600 */
+  --color-text-light: #cbd5e1;
+  /* slate-300 */
+
+  /* Status Colors - Vibrant & Clear */
+  --color-success: #10b981;
+  /* emerald-500 */
   --color-success-50: #ecfdf5;
   /* emerald-50 */
   --color-success-100: #d1fae5;
@@ -635,46 +662,59 @@ video {
   /* emerald-500 */
   --color-success-600: #059669;
   /* emerald-600 */
-  --color-success-700: #047857;
-  /* emerald-700 */
-  --color-warning: #d97706;
-  /* amber-600 */
+
+  --color-warning: #f59e0b;
+  /* amber-500 */
   --color-warning-50: #fffbeb;
   /* amber-50 */
   --color-warning-100: #fef3c7;
   /* amber-100 */
   --color-warning-500: #f59e0b;
   /* amber-500 */
-  --color-warning-600: #d97706;
-  /* amber-600 */
-  --color-error: #dc2626;
-  /* red-600 */
+
+  --color-error: #ef4444;
+  /* red-500 */
   --color-error-50: #fef2f2;
   /* red-50 */
   --color-error-100: #fee2e2;
   /* red-100 */
   --color-error-500: #ef4444;
   /* red-500 */
-  --color-error-600: #dc2626;
-  /* red-600 */
-  --color-error-700: #b91c1c;
-  /* red-700 */
-  /* Border Colors */
+
+  --color-info: #3b82f6;
+  /* blue-500 */
+  --color-info-50: #eff6ff;
+  /* blue-50 */
+  --color-info-100: #dbeafe;
+  /* blue-100 */
+
+  /* Border Colors - Soft & Light */
   --color-border: #e2e8f0;
   /* slate-200 */
   --color-border-light: #f1f5f9;
   /* slate-100 */
-  /* Shadow Values */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.12);
-  /* Transition Timings */
-  --transition-fast: 200ms;
-  --transition-base: 300ms;
-  --transition-slow: 400ms;
-}
+  --color-border-accent: #bae6fd;
+  /* sky-200 */
 
+  /* Shadow Values - Softer, Colored */
+  --shadow-sm: 0 1px 3px rgba(14, 165, 233, 0.08);
+  --shadow-md: 0 4px 12px rgba(14, 165, 233, 0.1);
+  --shadow-lg: 0 10px 30px rgba(14, 165, 233, 0.12);
+  --shadow-xl: 0 20px 50px rgba(14, 165, 233, 0.15);
+  --shadow-glow: 0 0 40px rgba(14, 165, 233, 0.2);
+
+  /* Gradient Definitions */
+  --gradient-primary: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 50%, #7dd3fc 100%);
+  --gradient-accent: linear-gradient(135deg, #f43f5e 0%, #fb7185 50%, #fda4af 100%);
+  --gradient-fresh: linear-gradient(135deg, #0ea5e9 0%, #14b8a6 50%, #10b981 100%);
+  --gradient-warm: linear-gradient(135deg, #fef3c7 0%, #fef9c3 50%, #ffffff 100%);
+  --gradient-sunset: linear-gradient(135deg, #f43f5e 0%, #f59e0b 100%);
+
+  /* Transition Timings */
+  --transition-fast: 150ms;
+  --transition-base: 250ms;
+  --transition-slow: 350ms;
+}
 body {
   font-family: 'Inter', sans-serif;
   color: var(--color-text-primary);

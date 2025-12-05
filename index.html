@@ -26,193 +26,306 @@
                 <!-- Logo -->
                 <!-- <a href="homepage.html" class="flex items-center space-x-3 group">
     <img src="assets/images/CCH_logo.png" alt="Winifred Place Logo" class="w-12 h-12 object-contain"> -->
-    <div class="flex flex-col">
-        <span class="text-xl font-bold text-primary group-hover:text-primary-700 transition-colors">Winifred Place</span>
-        <span class="text-xs text-text-secondary">North Finchley</span>
-    </div>
+    <div class="flex flex-col group">
+    <!-- Gradient Title -->
+    <span class="text-xl font-bold bg-gradient-to-r from-sky-500 via-sky-600 to-teal-500 bg-clip-text text-transparent transition-all duration-300 group-hover:from-teal-500 group-hover:via-sky-600 group-hover:to-sky-500">
+        Winifred Place
+    </span>
+    <!-- Subtitle -->
+    <span class="text-xs text-text-secondary">North Finchley</span>
+</div>
+
 </a>
 
 
                 <!-- Desktop Navigation -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html" class="text-primary font-semibold border-b-2 border-accent pb-1">Home</a>
-                    <a href="#location-highlights" class="text-text-secondary hover:text-primary transition-colors">About</a>
-                    <a href="#why-us" class="text-text-secondary hover:text-primary transition-colors">Why us</a>
-                    <a href="#available-spaces" class="text-text-secondary hover:text-primary transition-colors">Available Spaces</a>
-                    <a href="#contact" class="text-text-secondary hover:text-primary transition-colors">Contact</a>
-
-                </div>
-
-                <!-- CTA Buttons -->
-<div class="hidden md:flex items-center space-x-4">
-    <!-- Phone link -->
-    <a href="tel:+442081234567" class="flex items-center space-x-2 text-text-secondary hover:text-primary transition-colors">
-        <!-- Proper phone handset icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-text-secondary" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.48 2.53.73 3.88.73a1 1 0 011 1V20a1 1 0 01-1 1c-9.39 0-17-7.61-17-17a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.25 2.67.73 3.88a1 1 0 01-.21 1.11l-2.2 2.2z"/>
-        </svg>
-        <span class="font-medium">020 8369 6000</span>
+<div class="hidden lg:flex items-center space-x-8">
+    <!-- Current Page with Gradient -->
+    <a href="index.html" class="font-semibold pb-1 bg-gradient-to-r from-sky-500 via-sky-600 to-teal-500 bg-clip-text text-transparent border-b-2 border-accent transition-all duration-300">
+        Home
     </a>
 
-    <!-- Book Viewing button -->
-    <a href="#contact" class="btn btn-accent px-6 py-3 text-lg hover-lift transition-transform">Book Viewing</a>
+    <!-- Other Links -->
+    <a href="#location-highlights" class="text-text-secondary hover:text-primary transition-colors">About</a>
+    <a href="#why-us" class="text-text-secondary hover:text-primary transition-colors">Why us</a>
+    <a href="#available-spaces" class="text-text-secondary hover:text-primary transition-colors">Available Spaces</a>
+    <a href="#contact" class="text-text-secondary hover:text-primary transition-colors">Contact</a>
 </div>
 
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="lg:hidden p-2 text-primary hover:bg-secondary rounded-lg transition-colors">
-                    <img src="https://images.unsplash.com/photo-1571953224581-8b3b9582b432" alt="Menu icon" class="w-6 h-6">
-                </button>
-            </div>
+                <!-- CTA Buttons -->
+<div class="hidden md:flex items-center space-x-4">
+    <!-- Phone link styled like CTA -->
+    <a href="tel:+442081234567" class="group relative flex items-center space-x-2 bg-gradient-to-r from-sky-500 via-sky-600 to-teal-500 text-white font-medium px-5 py-3 rounded-xl shadow-xl shadow-sky-500/25 hover:shadow-2xl hover:shadow-sky-500/40 transform hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+        <!-- Shine effect -->
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+        <!-- Phone Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 relative" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.48 2.53.73 3.88.73a1 1 0 011 1V20a1 1 0 01-1 1c-9.39 0-17-7.61-17-17a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.25 2.67.73 3.88a1 1 0 01-.21 1.11l-2.2 2.2z"/>
+        </svg>
+        <span class="relative">020 8369 6000</span>
+    </a>
 
-            <!-- Mobile Navigation Menu -->
-            <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-border mt-4 pt-4">
-                <div class="flex flex-col space-y-4">
-                    <a href="#hero" class="text-primary font-semibold">Home</a>
-                    <a href="#about" class="text-text-secondary hover:text-primary transition-colors">About</a>
-                    <a href="#why-us" class="text-text-secondary hover:text-primary transition-colors">Why us</a>
-                    <a href="#available-spaces" class="text-text-secondary hover:text-primary transition-colors">Available Spaces</a>
-                    <a href="#contact" class="text-text-secondary hover:text-primary transition-colors">Contact</a>
-                    <div class="pt-4 border-t border-border">
-                        <a href="tel:+442081234567" class="flex items-center space-x-2 text-text-secondary hover:text-primary transition-colors mb-3">
-                            <img src="https://images.unsplash.com/photo-1626033324955-536b0c7777e4" alt="Phone icon" class="w-5 h-5">
-                            <span class="font-medium">020 8369 6000</span>
-                        </a>
-                        <a href="#contact" class="btn btn-accent w-full">Book Viewing</a>
-                    </div>
-                </div>
-            </div>
+
+</div>
+
+
+
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-btn" class="lg:hidden p-2 text-primary hover:bg-secondary rounded-lg transition-colors">
+    <!-- Hamburger Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+</button>
+
+<!-- Mobile Navigation Menu -->
+<div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-border mt-4 pt-4">
+    <div class="flex flex-col space-y-4">
+        <a href="#hero" class="text-primary font-semibold">Home</a>
+        <a href="#about" class="text-text-secondary hover:text-primary transition-colors">About</a>
+        <a href="#why-us" class="text-text-secondary hover:text-primary transition-colors">Why us</a>
+        <a href="#available-spaces" class="text-text-secondary hover:text-primary transition-colors">Available Spaces</a>
+        <a href="#contact" class="text-text-secondary hover:text-primary transition-colors">Contact</a>
+
+        <!-- Phone CTA for Mobile -->
+        <a href="tel:+442081234567" class="group relative flex items-center space-x-2 bg-gradient-to-r from-sky-500 via-sky-600 to-teal-500 text-white font-medium px-5 py-3 rounded-xl shadow-xl shadow-sky-500/25 hover:shadow-2xl hover:shadow-sky-500/40 transform hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+            <!-- Shine effect -->
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+            <!-- Phone Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 relative" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.48 2.53.73 3.88.73a1 1 0 011 1V20a1 1 0 01-1 1c-9.39 0-17-7.61-17-17a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.25 2.67.73 3.88a1 1 0 01-.21 1.11l-2.2 2.2z"/>
+            </svg>
+            <span class="relative">020 8369 6000</span>
+        </a>
+    </div>
+</div>
+
+
+
         </nav>
     </header>
 
-<!-- Hero Section -->
-<section id="hero" class="relative pt-24 pb-20 md:pt-32 md:pb-28 lg:pt-40 lg:pb-36 overflow-hidden min-h-screen flex items-center">
-    <!-- Background with Gradient Layers -->
+
+    <!-- Mobile Menu Toggle Script -->
+<script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+<!-- Hero Section - Light & Colorful Version -->
+<section id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-sky-50">
+    
+    <!-- Animated Background Elements -->
     <div class="absolute inset-0 z-0 overflow-hidden">
-        <!-- Main Background Image with Parallax Effect -->
-        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-blue-900">
+        
+        <!-- Subtle Background Image -->
+        <div class="absolute inset-0">
             <img src="assets/images/building.png" 
-                 alt="Modern professional office space with natural lighting and contemporary furniture" 
-                 class="w-full h-full object-cover opacity-40 scale-105 transition-transform duration-10000 ease-out hero-bg-image"
+                 alt="Modern professional office space" 
+                 class="w-full h-full object-cover opacity-[0.08] scale-105"
                  loading="eager">
         </div>
-        
-        <!-- Animated Gradient Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/70 to-indigo-900/80"></div>
-        
-        <!-- Geometric Pattern Overlay -->
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0 bg-grid-pattern bg-[size:50px_50px]"></div>
+
+        <!-- Colorful Gradient Mesh -->
+        <div class="absolute inset-0">
+            <!-- Top-left: Sky Blue Blob -->
+            <div class="absolute -top-40 -left-40 w-[600px] h-[600px] bg-gradient-to-br from-sky-200/60 via-sky-300/40 to-transparent rounded-full blur-3xl animate-blob"></div>
+            
+            <!-- Top-right: Rose/Coral Blob -->
+            <div class="absolute -top-20 -right-20 w-[500px] h-[500px] bg-gradient-to-bl from-rose-200/50 via-pink-200/30 to-transparent rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+            
+            <!-- Bottom-left: Teal/Mint Blob -->
+            <div class="absolute -bottom-40 -left-20 w-[550px] h-[550px] bg-gradient-to-tr from-teal-200/50 via-emerald-200/30 to-transparent rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+            
+            <!-- Bottom-right: Amber/Yellow Blob -->
+            <div class="absolute -bottom-20 -right-40 w-[600px] h-[600px] bg-gradient-to-tl from-amber-200/50 via-yellow-100/30 to-transparent rounded-full blur-3xl animate-blob animation-delay-3000"></div>
+            
+            <!-- Center Accent -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-gradient-to-r from-sky-100/30 via-white/50 to-teal-100/30 rounded-full blur-3xl"></div>
         </div>
+
+        <!-- Floating Geometric Shapes -->
+        <div class="absolute top-20 left-[15%] w-20 h-20 border-2 border-sky-300/30 rounded-2xl rotate-12 animate-float-slow"></div>
+        <div class="absolute top-40 right-[20%] w-16 h-16 bg-gradient-to-br from-rose-300/20 to-pink-300/20 rounded-full animate-float-slower"></div>
+        <div class="absolute bottom-32 left-[10%] w-24 h-24 border-2 border-teal-300/30 rounded-full animate-float-gentle"></div>
+        <div class="absolute bottom-20 right-[15%] w-14 h-14 bg-gradient-to-br from-amber-300/30 to-yellow-300/20 rounded-lg rotate-45 animate-float-slow"></div>
         
-        <!-- Floating Elements -->
-        <div class="absolute top-1/4 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float-slow"></div>
-        <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-float-slower"></div>
+        <!-- Dot Grid Pattern -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle, #0ea5e9 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+        <!-- Light Rays -->
+        <div class="absolute top-0 left-1/4 w-px h-96 bg-gradient-to-b from-sky-300/40 via-sky-200/20 to-transparent rotate-12"></div>
+        <div class="absolute top-0 right-1/3 w-px h-80 bg-gradient-to-b from-rose-300/30 via-rose-200/15 to-transparent -rotate-12"></div>
     </div>
 
-    <!-- Content Container -->
-    <div class="container-custom relative z-10">
-        <div class="max-w-4xl mx-auto text-center lg:text-left">
-            <div class="grid lg:grid-cols-12 gap-8 items-center">
-                <!-- Main Content -->
-                <div class="lg:col-span-8">
-                    <!-- Premium Badge -->
-                    <div class="inline-flex items-center justify-center lg:justify-start gap-3 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-3 rounded-full mb-8 animate-slide-up-fast">
-                        <div class="relative">
-                            <div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-                            <div class="w-2 h-2 bg-accent rounded-full animate-ping absolute inset-0"></div>
-                        </div>
-                        <span class="text-white font-semibold tracking-wide text-sm uppercase letter-spacing-wide">Modern Office Suite Available</span>
-                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-
-                    <!-- Main Heading with Gradient Text -->
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
-                        <span class="text-white block mb-2">Experience</span>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-400 to-accent">
-                            Office Excellence
-                        </span>
-                        <span class="text-white block mt-2">in North Finchley</span>
-                    </h1>
-
-                    <!-- Subtitle -->
-                    <p class="text-xl md:text-2xl text-blue-100 mb-10 leading-relaxed max-w-3xl">
-                       Experience a new standard of working in North Finchley—thoughtfully designed offices with all the amenities your business needs to thrive.
-                    </p>
-
-                    <!-- CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 mb-12 justify-center lg:justify-start">
-                        <!-- Primary CTA -->
-                        <a href="#available-spaces" class="group relative overflow-hidden bg-gradient-to-r from-accent to-amber-600 text-white font-semibold text-lg px-8 py-4 rounded-lg hover-lift transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl shadow-accent/30 inline-flex items-center justify-center min-w-[200px]">
-                            <span class="relative z-10">View Available Space</span>
-                            <svg class="w-5 h-5 ml-3 relative z-10 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                            </svg>
-                            <div class="absolute inset-0 bg-gradient-to-r from-amber-600 to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        </a>
-
-                        <!-- Secondary CTA -->
-                        <a href="#contact" class="group bg-transparent border-2 border-white/30 text-white font-semibold text-lg px-8 py-4 rounded-lg hover-lift transform transition-all duration-300 hover:scale-105 hover:border-white/60 inline-flex items-center justify-center min-w-[200px]">
-                            <span class="relative z-10">Schedule Viewing</span>
-                            <svg class="w-5 h-5 ml-3 relative z-10 transform group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <!-- Key Features -->
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12">
-                        <div class="flex items-center space-x-3 text-white/80">
-                            <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-                            </svg>
-                            <span class="text-sm font-medium">Prime N12 Location</span>
-                        </div>
-                        <div class="flex items-center space-x-3 text-white/80">
-                            <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd"/>
-                            </svg>
-                            <span class="text-sm font-medium">Flexible Terms</span>
-                        </div>
-                        <div class="flex items-center space-x-3 text-white/80">
-                            <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
-                            </svg>
-                            <span class="text-sm font-medium">24/7 Access</span>
-                        </div>
-                    </div>
+    <!-- Main Content Container -->
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-20 md:pt-32 md:pb-28">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <!-- Left Content Column -->
+            <div class="lg:col-span-7 text-center lg:text-left">
+                
+                <!-- Animated Badge -->
+                <div class="inline-flex items-center gap-3 bg-white/80 backdrop-blur-md border border-sky-200/50 shadow-lg shadow-sky-100/50 px-5 py-2.5 rounded-full mb-8 animate-fade-in-up">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                    </span>
+                    <span class="text-slate-700 font-semibold text-sm tracking-wide">1 Business Suite Available Now</span>
+                    <span class="bg-gradient-to-r from-sky-500 to-teal-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">NEW</span>
                 </div>
 
-                <!-- Stats Card -->
-                <div class="lg:col-span-4">
-                    <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-2xl transform transition-all duration-500 hover:scale-105">
-                        <div class="space-y-6">
-                            <div class="text-center">
-                                <div class="text-4xl font-bold text-white mb-1">1</div>
-                                <div class="text-accent font-semibold uppercase tracking-wide text-sm">Business Suite</div>
-                                <div class="text-white/70 text-sm mt-1">Available Now</div>
+                <!-- Main Headline -->
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-6 animate-fade-in-up animation-delay-100">
+                    <span class="text-slate-800 block">Elevate Your</span>
+                    <span class="relative inline-block mt-2">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-teal-500 to-emerald-500 animate-gradient-x">
+                            Workspace
+                        </span>
+                        <!-- Underline decoration -->
+                        <svg class="absolute -bottom-2 left-0 w-full h-3 text-amber-400/60" viewBox="0 0 200 8" preserveAspectRatio="none">
+                            <path d="M0 7 Q50 0 100 7 T200 7" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <span class="text-slate-800 block mt-2">Experience</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-lg sm:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0 animate-fade-in-up animation-delay-200">
+                    Discover thoughtfully designed office spaces in <span class="font-semibold text-slate-700">North Finchley</span>—where modern amenities meet professional excellence for businesses ready to thrive.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 animate-fade-in-up animation-delay-300">
+                    
+                    <!-- Primary CTA -->
+                    <a href="#available-spaces" class="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-sky-500 via-sky-600 to-teal-500 text-white font-semibold text-lg px-8 py-4 rounded-xl shadow-xl shadow-sky-500/25 hover:shadow-2xl hover:shadow-sky-500/40 transform hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                        <!-- Shine effect -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                        <span class="relative">View Available Space</span>
+                        <svg class="w-5 h-5 relative transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+
+                    <!-- Secondary CTA -->
+                    <a href="#contact" class="group inline-flex items-center justify-center gap-3 bg-white/80 backdrop-blur-sm border-2 border-slate-200 hover:border-sky-300 text-slate-700 hover:text-sky-600 font-semibold text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                        <svg class="w-5 h-5 transform group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        <span>Schedule a Tour</span>
+                    </a>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 animate-fade-in-up animation-delay-400">
+                    <div class="flex items-center gap-2 text-slate-600">
+                        <div class="flex items-center justify-center w-10 h-10 bg-sky-100 rounded-xl">
+                            <svg class="w-5 h-5 text-sky-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <span class="text-sm font-medium">Prime N12 Location</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-slate-600">
+                        <div class="flex items-center justify-center w-10 h-10 bg-teal-100 rounded-xl">
+                            <svg class="w-5 h-5 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <span class="text-sm font-medium">24/7 Access</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-slate-600">
+                        <div class="flex items-center justify-center w-10 h-10 bg-amber-100 rounded-xl">
+                            <svg class="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                        <span class="text-sm font-medium">Premium Amenities</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content Column - Feature Card -->
+            <div class="lg:col-span-5 animate-fade-in-up animation-delay-500">
+                <div class="relative">
+                    <!-- Decorative elements behind card -->
+                    <div class="absolute -inset-4 bg-gradient-to-r from-sky-200/50 via-teal-200/50 to-emerald-200/50 rounded-3xl blur-2xl opacity-60"></div>
+                    
+                    <!-- Main Card -->
+                    <div class="relative bg-white/90 backdrop-blur-xl border border-white/50 rounded-3xl shadow-2xl shadow-slate-200/50 overflow-hidden">
+                        
+                        <!-- Card Header -->
+                        <div class="bg-gradient-to-r from-sky-500 via-teal-500 to-emerald-500 px-6 py-5">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-sky-100 text-sm font-medium">Available Now</p>
+                                    <h3 class="text-white text-xl font-bold">Business Suite</h3>
+                                </div>
+                                <div class="flex items-center justify-center w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl">
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card Body -->
+                        <div class="p-6">
+                            <!-- Quick Stats -->
+                            <div class="grid grid-cols-3 gap-4 mb-6">
+                                <div class="text-center p-4 bg-slate-50 rounded-2xl">
+                                    <div class="text-2xl font-bold text-slate-800">3-4</div>
+                                    <div class="text-xs text-slate-500 font-medium mt-1">Desks</div>
+                                </div>
+                                <div class="text-center p-4 bg-slate-50 rounded-2xl">
+                                    <div class="text-2xl font-bold text-slate-800">Zone 4</div>
+                                    <div class="text-xs text-slate-500 font-medium mt-1">Location</div>
+                                </div>
+                                <div class="text-center p-4 bg-slate-50 rounded-2xl">
+                                    <div class="text-2xl font-bold text-slate-800">3-24</div>
+                                    <div class="text-xs text-slate-500 font-medium mt-1">Months</div>
+                                </div>
                             </div>
                             
-                            <div class="space-y-4">
-                                <div class="flex items-center justify-between pb-3 border-b border-white/10">
-                                    <span class="text-white/80 text-sm">Capacity</span>
-                                    <span class="text-white font-semibold">3-4 Desks</span>
+                            <!-- Features List -->
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-slate-600">High-speed fibre internet included</span>
                                 </div>
-                                <div class="flex items-center justify-between pb-3 border-b border-white/10">
-                                    <span class="text-white/80 text-sm">Flexible Terms</span>
-                                    <span class="text-white font-semibold">3-24 Months</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-slate-600">Shared kitchen & meeting rooms</span>
                                 </div>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-white/80 text-sm">Location</span>
-                                    <span class="text-white font-semibold">Zone 4</span>
+                                <div class="flex items-center gap-3">
+                                    <div class="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text-slate-600">All utilities & rates included</span>
                                 </div>
                             </div>
                             
-                            <a href="#availability-status" class="block w-full bg-white/20 hover:bg-white/30 text-white font-medium py-3 px-4 rounded-lg text-center transition-colors duration-300">
-                                View Full Details
+                            <!-- CTA Button -->
+                            <a href="#available-spaces" class="group flex items-center justify-center gap-2 w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 hover:shadow-lg">
+                                <span>View Full Details</span>
+                                <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -222,15 +335,124 @@
     </div>
 
     <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <a href="#availability-status" class="animate-bounce-slow flex flex-col items-center text-white/60 hover:text-white transition-colors duration-300">
-            <span class="text-sm mb-2">Explore More</span>
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-            </svg>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-fade-in-up animation-delay-700">
+        <a href="#availability-status" class="group flex flex-col items-center gap-2 text-slate-400 hover:text-sky-500 transition-colors duration-300">
+            <span class="text-sm font-medium">Scroll to Explore</span>
+            <div class="w-6 h-10 border-2 border-current rounded-full flex justify-center pt-2">
+                <div class="w-1.5 h-3 bg-current rounded-full animate-scroll-indicator"></div>
+            </div>
         </a>
     </div>
 </section>
+
+<style>
+/* Blob Animation */
+@keyframes blob {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(20px, -30px) scale(1.05);
+    }
+    50% {
+        transform: translate(-20px, 20px) scale(0.95);
+    }
+    75% {
+        transform: translate(30px, 10px) scale(1.02);
+    }
+}
+
+.animate-blob {
+    animation: blob 20s ease-in-out infinite;
+}
+
+/* Animation Delays */
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-500 { animation-delay: 500ms; }
+.animation-delay-700 { animation-delay: 700ms; }
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-3000 { animation-delay: 3s; }
+.animation-delay-4000 { animation-delay: 4s; }
+
+/* Fade In Up Animation */
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+/* Float Animations */
+@keyframes float-slow {
+    0%, 100% { transform: translateY(0) rotate(12deg); }
+    50% { transform: translateY(-20px) rotate(12deg); }
+}
+
+@keyframes float-slower {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes float-gentle {
+    0%, 100% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-10px) translateX(5px); }
+}
+
+.animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+.animate-float-slower { animation: float-slower 12s ease-in-out infinite; }
+.animate-float-gentle { animation: float-gentle 10s ease-in-out infinite; }
+
+/* Gradient X Animation */
+@keyframes gradient-x {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.animate-gradient-x {
+    background-size: 200% auto;
+    animation: gradient-x 4s ease infinite;
+}
+
+/* Scroll Indicator */
+@keyframes scroll-indicator {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+}
+
+.animate-scroll-indicator {
+    animation: scroll-indicator 2s ease-in-out infinite;
+}
+
+/* Shine effect for buttons */
+@keyframes shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+</style>
 
 <style>
 /* Custom Styles for Hero Section */
@@ -400,13 +622,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="flex-1">
                     <!-- Status Badge -->
-                    <div class="inline-flex items-center space-x-2 bg-success/10 px-4 py-2 rounded-full mb-4">
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full mb-4 bg-success/10">
                         <div class="w-2 h-2 bg-success rounded-full animate-pulse"></div>
-                        <span class="text-success font-semibold text-sm">Available Now</span>
+                        <!-- Gradient text for status -->
+                        <span class="font-semibold text-sm text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-teal-500 to-emerald-500 animate-gradient-x">
+                            Available Now
+                        </span>
                     </div>
 
-                    <!-- Title -->
-                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+                    <!-- Title with gradient text -->
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-teal-500 to-emerald-500 animate-gradient-x">
                         1 Office Suite Ready to Rent
                     </h2>
 
@@ -418,7 +643,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <!-- Quick Specs -->
                     <div class="flex flex-wrap gap-4">
                         <div class="flex items-center space-x-2">
-                            <!-- Building icon from Heroicons CDN -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 21v-8a4 4 0 014-4h10a4 4 0 014 4v8M3 21h18M8 21v-4a2 2 0 012-2h4a2 2 0 012 2v4" />
                             </svg>
@@ -426,7 +650,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
 
                         <div class="flex items-center space-x-2">
-                            <!-- Size icon from Heroicons CDN -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M3 6h18M3 18h18" />
                             </svg>
@@ -434,7 +657,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
 
                         <div class="flex items-center space-x-2">
-                            <!-- Calendar icon from Heroicons CDN -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
@@ -443,30 +665,46 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
 
-                <!-- CTA -->
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#available-spaces" class="btn btn-primary text-lg px-8 py-4 whitespace-nowrap">
-                        View Office Details
-                    </a>
-                    <a href="#contact" class="btn btn-accent text-lg px-8 py-4 whitespace-nowrap">
-                        Book Viewing
-                    </a>
-                </div>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 animate-fade-in-up animation-delay-300">
+    
+    <!-- Primary CTA -->
+    <a href="#available-spaces" class="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-sky-500 via-sky-600 to-teal-500 text-white font-semibold text-lg px-8 py-4 rounded-xl shadow-xl shadow-sky-500/25 hover:shadow-2xl hover:shadow-sky-500/40 transform hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+        <!-- Shine effect -->
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+        <span class="relative">View Office Details</span>
+        <svg class="w-5 h-5 relative transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+    </a>
+
+    <!-- Secondary CTA -->
+    <a href="#contact" class="group inline-flex items-center justify-center gap-3 bg-white/80 backdrop-blur-sm border-2 border-slate-200 hover:border-sky-300 text-slate-700 hover:text-sky-600 font-semibold text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+        <svg class="w-5 h-5 transform group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        <span>Book Viewing</span>
+    </a>
+</div>
+
 
             </div>
         </div>
     </div>
 </section>
 
+
     <!-- Location Highlights -->
     <section id="location-highlights" class="section bg-white">
         <div class="container-custom">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">North Finchley's Premier <br>High Street Address</h2>
-                    <p class="text-lg text-text-secondary mb-8 leading-relaxed">
-                        Positioned in the heart of North London's thriving business district, Winifred Place offers unparalleled connectivity and access to everything your business needs to succeed.
-                    </p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-sky-500 via-sky-600 to-teal-500 bg-clip-text text-transparent transition-all duration-500 group-hover:from-teal-500 group-hover:via-sky-600 group-hover:to-sky-500">
+    North Finchley's Premier <br>High Street Address
+</h2>
+<p class="text-lg text-text-secondary mb-8 leading-relaxed">
+    Positioned in the heart of North London's thriving business district, Winifred Place offers unparalleled connectivity and access to everything your business needs to succeed.
+</p>
+
 
  
     <div class="max-w-2xl w-full bg-white rounded-2xl shadow-lg p-8">
@@ -548,10 +786,18 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Key Value Propositions -->
     <section id="why-us" class="section section-alt">
         <div class="container-custom">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Why Choose Winifred Place</h2>
-                <p class="text-lg text-text-secondary max-w-2xl mx-auto">More than space—a business community designed for growth</p>
-            </div>
+            <div class="text-center mb-16 group">
+    <!-- Gradient Heading -->
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-sky-500 via-sky-600 to-teal-500 bg-clip-text text-transparent transition-all duration-500 group-hover:from-teal-500 group-hover:via-sky-600 group-hover:to-sky-500">
+        Why Choose Winifred Place
+    </h2>
+    
+    <!-- Subtitle -->
+    <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+        More than space—a business community designed for growth
+    </p>
+</div>
+
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Flexible Terms -->
@@ -563,7 +809,9 @@ document.addEventListener('DOMContentLoaded', function() {
         </svg>
     </div>
 
-    <h3 class="text-2xl font-bold text-primary mb-4">Flexible Terms</h3>
+<h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-sky-500 via-sky-600 to-teal-500 bg-clip-text text-transparent transition-all duration-500 group-hover:from-teal-500 group-hover:via-sky-600 group-hover:to-sky-500">
+    Flexible Terms
+</h3>
     <p class="text-text-secondary mb-6 leading-relaxed">
         From 3 to 24-month leases designed to accommodate your business growth. No long-term commitments, just flexibility when you need it.
     </p>
@@ -603,7 +851,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </svg>
     </div>
 
-    <h3 class="text-2xl font-bold text-primary mb-4">Prime Location</h3>
+                <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-sky-500 via-sky-600 to-teal-500 bg-clip-text text-transparent transition-all duration-500 group-hover:from-teal-500 group-hover:via-sky-600 group-hover:to-sky-500">Prime Location</h3>
     <p class="text-text-secondary mb-6 leading-relaxed">
         North Finchley's premier business address with excellent transport links and thriving local amenities. Your business deserves this postcode.
     </p>
@@ -644,7 +892,10 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 
-    <h3 class="text-2xl font-bold text-primary mb-4">Enterprise Community</h3>
+    <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-sky-500 via-sky-600 to-teal-500 bg-clip-text text-transparent transition-all duration-500 group-hover:from-teal-500 group-hover:via-sky-600 group-hover:to-sky-500">
+    Enterprise Community
+</h3>
+
     <p class="text-text-secondary mb-6 leading-relaxed">
         Join a vibrant community of entrepreneurs and professionals. Build connections and unlock new opportunities in a supportive ecosystem.
     </p>
@@ -1080,7 +1331,9 @@ document.addEventListener('keydown', (e) => {
             <div class="flex flex-col lg:flex-row gap-8">
                 <!-- Office Description -->
                 <div class="lg:w-2/3">
-                    <h2 class="text-3xl font-bold text-primary mb-6">Modern Office Suite in North Finchley</h2>
+<h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-sky-500 via-sky-600 to-teal-500 bg-clip-text text-transparent transition-all duration-500 group-hover:from-teal-500 group-hover:via-sky-600 group-hover:to-sky-500">
+    Modern Office Suite in North Finchley
+</h2>
                     
                     <div class="prose max-w-none text-gray-600 mb-8">
                         <p class="mb-4">
@@ -1174,7 +1427,7 @@ document.addEventListener('keydown', (e) => {
                             
                             <div class="flex justify-between py-2 border-b border-gray-200">
                                 <span class="text-gray-600">Capacity</span>
-                                <span class="font-semibold text-gray-800">2-3 Desks</span>
+                                <span class="font-semibold text-gray-800">3-4 Desks</span>
                             </div>
                             
                             <div class="flex justify-between py-2 border-b border-gray-200">
@@ -1206,10 +1459,14 @@ document.addEventListener('keydown', (e) => {
                         <div class="mt-6 space-y-3">
                             
                             
-                            <a href="#contact" class="w-full bg-accent hover:bg-amber-600 text-white font-medium py-3 px-4 rounded-lg flex items-center justify-center transition duration-200">
-                                <span>Book a Viewing</span>
-                                <i class="fas fa-calendar-alt ml-2"></i>
-                            </a>
+                            <a href="#contact" class="group relative w-full inline-flex items-center justify-center gap-3 bg-gradient-to-r from-sky-500 via-sky-600 to-teal-500 text-white font-semibold py-3 px-4 rounded-xl shadow-xl shadow-sky-500/25 hover:shadow-2xl hover:shadow-sky-500/40 transform hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+    <!-- Shine effect -->
+    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+    
+    <span class="relative">Book a Viewing</span>
+    <i class="fas fa-calendar-alt ml-2 relative"></i>
+</a>
+
                         </div>
                     </div>
                 </div>
@@ -1271,13 +1528,19 @@ document.addEventListener('keydown', (e) => {
                                 <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                                     <i class="fas fa-phone-alt text-blue-600 text-xl"></i>
                                 </div>
-                                <div>
-                                    <h3 class="font-semibold text-gray-800 mb-1">Call Us Directly</h3>
-                                    <a href="tel:02083696000" class="text-2xl font-bold text-blue-600 hover:text-blue-700 block">
-                                        020 8369 6000
-                                    </a>
-                                    <p class="text-sm text-gray-600 mt-1">Speak with our team</p>
-                                </div>
+                                <div class="flex flex-col space-y-1">
+    <h3 class="font-semibold text-gray-800 mb-1">Call Us Directly</h3>
+    
+    <!-- Gradient Phone CTA -->
+    <a href="tel:02083696000" class="group relative text-2xl font-bold block bg-gradient-to-r from-sky-500 via-sky-600 to-teal-500 bg-clip-text text-transparent transition-all duration-500 hover:from-teal-500 hover:via-sky-600 hover:to-sky-500">
+        020 8369 6000
+        <!-- Optional subtle shine -->
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+    </a>
+    
+    <p class="text-sm text-gray-600 mt-1">Speak with our team</p>
+</div>
+
                             </div>
                             
                             <!-- Email Card -->
@@ -1452,7 +1715,7 @@ document.addEventListener('keydown', (e) => {
                                     Available
                                 </span>
                             </div>
-                            <p class="text-gray-600 text-xs">Lodge Lane Car Park (2 min walk)</p>
+                            <p class="text-gray-600 text-xs">Lodge Lane Car Park</p>
                         </div>
                         
                         
@@ -1542,165 +1805,105 @@ document.addEventListener('keydown', (e) => {
     <!-- Tenant Testimonials Carousel -->
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer - Winifred Place</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1e40af',
-                        accent: '#f59e0b',
-                        'blue-200': '#bfdbfe',
-                        'blue-900': '#1e3a8a',
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-gray-100">
-    <!-- Footer -->
-    <footer id="main-footer" class="bg-blue-900 text-white pt-12 pb-8 mt-10">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <!-- Company Info -->
-                <div>
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="w-12 h-12 bg-blue-800 rounded-lg flex items-center justify-center">
-                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                            </svg>
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="text-xl font-bold">Winifred Place</span>
-                            <span class="text-sm text-blue-200">North Finchley</span>
-                        </div>
-                    </div>
-                    <p class="text-blue-200 mb-4 leading-relaxed">
-                        Modern office space in North Finchley. Where business potential meets perfect location.
-                    </p>
-                   
-                </div>
+<!-- Footer - Light & Colorful Version -->
+<footer id="main-footer" class="relative bg-gradient-to-t from-sky-50 via-white to-teal-50 pt-16 pb-10 overflow-hidden" style="margin-top: 20px;">
 
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-lg font-bold mb-4 pb-2 border-b border-blue-800" style="color: white;">Quick Links</h3>
-                    <ul class="space-y-3">
-                        <li><a href="index.html" class="text-blue-200 hover:text-accent transition-colors flex items-center group">
-                            <svg class="w-4 h-4 mr-2 text-blue-400 group-hover:text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-                            </svg>
-                            Home
-                        </a></li>
-                        <li><a href="#location-highlights" class="text-blue-200 hover:text-accent transition-colors flex items-center group">
-                            <svg class="w-4 h-4 mr-2 text-blue-400 group-hover:text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                            About
-                        </a></li>
-                        <li><a href="#available-spaces" class="text-blue-200 hover:text-accent transition-colors flex items-center group">
-                            <svg class="w-4 h-4 mr-2 text-blue-400 group-hover:text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                            </svg>
-                            Available Spaces
-                        </a></li>
-                        <li><a href="#contact" class="text-blue-200 hover:text-accent transition-colors flex items-center group">
-                            <svg class="w-4 h-4 mr-2 text-blue-400 group-hover:text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path>
-                            </svg>
-                            Contact
-                    </ul>
-                </div>
+    <!-- Decorative Floating Blobs -->
+    <div class="absolute inset-0 z-0 overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-sky-200/60 via-sky-300/40 to-transparent rounded-full blur-3xl animate-blob"></div>
+        <div class="absolute -top-20 -right-20 w-[450px] h-[450px] bg-gradient-to-bl from-rose-200/50 via-pink-200/30 to-transparent rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-40 -left-20 w-[500px] h-[500px] bg-gradient-to-tr from-teal-200/50 via-emerald-200/30 to-transparent rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+        <div class="absolute -bottom-20 -right-40 w-[550px] h-[550px] bg-gradient-to-tl from-amber-200/50 via-yellow-100/30 to-transparent rounded-full blur-3xl animate-blob animation-delay-3000"></div>
+    </div>
 
-                <!-- Business Hours -->
-                <div>
-                    <h3 class="text-lg font-bold mb-4 pb-2 border-b border-blue-800 " style="color: white;">Business Hours</h3>
-                    <ul class="space-y-3">
-                        <li class="flex justify-between text-blue-200">
-                            <span class="font-medium">Monday - Friday</span>
-                            <span>9:00 AM - 5:00 PM</span>
-                        </li>
-                        <li class="flex justify-between text-blue-200">
-                            <span>Saturday & Sunday</span>
-                            <span>Closed</span>
-                        </li>
-                        
-                    </ul>
-                    <div class="mt-6 bg-blue-800 rounded-lg p-4">
-                        <p class="text-sm text-blue-200">
-                            <svg class="w-4 h-4 inline mr-1 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
-                            </svg>
-                            Viewings available by appointment
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-lg font-bold mb-4 pb-2 border-b border-blue-800" style="color: white;">Contact Us</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start space-x-3">
-                            <div class="w-5 h-5 mt-1 flex-shrink-0 text-blue-300">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                </svg>
-                            </div>
-                            <span class="text-blue-200">
-                                Winifred Place<br>
-                                North Finchley<br>
-                                London N12 8FE
-                            </span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <div class="w-5 h-5 flex-shrink-0 text-blue-300">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                </svg>
-                            </div>
-                            <a href="tel:+442083696000" class="text-blue-200 hover:text-accent transition-colors">020 8369 6000</a>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <div class="w-5 h-5 flex-shrink-0 text-blue-300">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                </svg>
-                            </div>
-                            <a href="mailto:jayesh@capitalcarehomes.com" class="text-blue-200 hover:text-accent transition-colors break-all">jayesh@capitalcarehomes.com</a>
-                        </li>
-                    </ul>
-                    <a href="#contact-section" class="mt-6 inline-flex items-center justify-center w-full bg-accent hover:bg-amber-600 text-white font-medium py-3 px-4 rounded-lg transition duration-200 group">
-                        Book Viewing
-                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+    <!-- Footer Content -->
+    <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="w-12 h-12 bg-white/50 backdrop-blur-sm rounded-lg flex items-center justify-center shadow-lg">
+                        <svg class="w-7 h-7 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                         </svg>
-                    </a>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold text-slate-800">Winifred Place</span>
+                        <span class="text-sm text-slate-500">North Finchley</span>
+                    </div>
+                </div>
+                <p class="text-slate-600 leading-relaxed">
+                    Modern office space in North Finchley. Where business potential meets perfect location.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4 pb-2 border-b border-slate-200 text-slate-800">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="text-slate-600 hover:text-sky-500 transition-colors flex items-center gap-2">
+                        Home
+                    </a></li>
+                    <li><a href="#location-highlights" class="text-slate-600 hover:text-sky-500 transition-colors flex items-center gap-2">
+                        About
+                    </a></li>
+                    <li><a href="#available-spaces" class="text-slate-600 hover:text-sky-500 transition-colors flex items-center gap-2">
+                        Available Spaces
+                    </a></li>
+                    <li><a href="#contact" class="text-slate-600 hover:text-sky-500 transition-colors flex items-center gap-2">
+                        Contact
+                    </a></li>
+                </ul>
+            </div>
+
+            <!-- Business Hours -->
+            <div>
+                <h3 class="text-lg font-bold mb-4 pb-2 border-b border-slate-200 text-slate-800">Business Hours</h3>
+                <ul class="space-y-2 text-slate-600">
+                    <li class="flex justify-between">
+                        <span class="font-medium">Monday - Friday</span>
+                        <span>9:00 AM - 5:00 PM</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Saturday & Sunday</span>
+                        <span>Closed</span>
+                    </li>
+                </ul>
+                <div class="mt-4 bg-white/50 backdrop-blur-sm rounded-lg p-3 text-slate-700 flex items-center gap-2 text-sm">
+                    <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                    </svg>
+                    Viewings available by appointment
                 </div>
             </div>
 
-            <!-- Bottom Bar -->
-            <div class="pt-8 border-t border-blue-800">
-                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                    <p class="text-blue-200 text-sm">
-                        © 2025 Winifred Place. All Rights Reserved.
-                    </p>
-                    <div class="flex flex-wrap justify-center gap-6 text-sm">
-                        <a href="#privacy-policy" class="text-blue-200 hover:text-accent transition-colors hover:underline">Privacy Policy</a>
-                        <a href="#terms" class="text-blue-200 hover:text-accent transition-colors hover:underline">Terms of Service</a>
-                        
-                </div>
-                
-               
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-lg font-bold mb-4 pb-2 border-b border-slate-200 text-slate-800">Contact Us</h3>
+                <ul class="space-y-3 text-slate-600">
+                    <li>Winifred Place, North Finchley, London N12 8FE</li>
+                    <li>Tel: <a href="tel:+442083696000" class="hover:text-sky-500 transition-colors">020 8369 6000</a></li>
+                    <li>Email: <a href="mailto:jayesh@capitalcarehomes.com" class="hover:text-sky-500 transition-colors">jayesh@capitalcarehomes.com</a></li>
+                </ul>
+                <a href="#contact-section" class="mt-4 inline-block w-full bg-gradient-to-r from-sky-500 via-teal-500 to-emerald-500 text-white font-semibold py-3 px-4 rounded-lg text-center shadow-lg hover:shadow-xl transition-all duration-300">
+                    Book Viewing
+                </a>
             </div>
         </div>
-    </footer>
+
+        <!-- Bottom Bar -->
+        <div class="pt-6 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-slate-600 text-sm">
+            <p>© 2025 Winifred Place. All Rights Reserved.</p>
+            <div class="flex gap-6 mt-2 md:mt-0">
+                <a href="#privacy-policy" class="hover:text-sky-500 transition-colors hover:underline">Privacy Policy</a>
+                <a href="#terms" class="hover:text-sky-500 transition-colors hover:underline">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 
     <style>
         /* Additional styles for better appearance */
